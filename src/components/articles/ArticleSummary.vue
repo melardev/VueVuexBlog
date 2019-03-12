@@ -20,7 +20,7 @@
             <br/>
 
             <router-link v-for="(tag,index) in article.tags" :to="'/articles/by_tag/' + tag.slug"
-                         :key="index.id" :index="index"
+                         :key="index.id" :index="index" style="margin-right: 5px"
                          :class="classes[index % 4]">
                 {{tag.name}}
             </router-link>
@@ -28,7 +28,8 @@
             <router-link v-for="(category,index) in article.categories"
                          :key="index.id" :index="index"
                          :to="'/articles/by_category/' + category.slug"
-                         :class="classes[index + 1 % 4]">
+                         :class="classes[index + 1 % 4]"
+                         style="margin-right: 5px">
                 {{category.name}}
             </router-link>
 
